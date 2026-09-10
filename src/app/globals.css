@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: "Comic Sans MS", cursive;
+
+  background-color: #08007a;
+
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.04) 25%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.12),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255, 255, 255, 0.08),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #08007a,
+      #1b0bb5 45%,
+      #5b20d6
+    );
+
+  background-size:
+    50px 50px,
+    50px 50px,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+
+  background-attachment: fixed;
+
+  color: var(--foreground);
+}
+
